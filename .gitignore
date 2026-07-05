@@ -1,0 +1,28 @@
+# ── Secrets & Environment ──────────────────────────
+.env
+.env.*
+*.env
+
+# ── Python ─────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.db
+*.sqlite3
+
+# ── Node / Frontend ────────────────────────────────
+node_modules/
+dist/
+.cache/
+*.local
+
+# ── OS ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── IDE ────────────────────────────────────────────
+.vscode/settings.json
+.idea/

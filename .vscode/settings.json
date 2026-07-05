@@ -1,0 +1,7 @@
+{
+  "python.defaultInterpreterPath": "C:\\Users\\nipun\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+  "python.terminal.activateEnvironment": false,
+  "[python]": {
+    "editor.formatOnSave": false
+  }
+}

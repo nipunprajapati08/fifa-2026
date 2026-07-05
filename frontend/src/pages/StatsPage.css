@@ -1,0 +1,120 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.stats-card-wide {
+  grid-column: 1 / -1;
+}
+
+.top-scorers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scorer-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.scorer-row:hover {
+  background: var(--bg-card-hover);
+}
+
+.scorer-rank {
+  width: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.scorer-name {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  min-width: 0;
+  flex: 1;
+}
+
+.scorer-team {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  min-width: 80px;
+  display: none;
+}
+
+@media (min-width: 900px) { .scorer-team { display: block; } }
+
+.scorer-bar-wrap {
+  flex: 2;
+  height: 6px;
+  background: var(--bg-card);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.scorer-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), #f59e0b);
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+
+.scorer-goals {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--gold);
+  min-width: 24px;
+  text-align: right;
+}
+
+.chart-tooltip {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  box-shadow: var(--shadow-card);
+}
+
+.chart-tooltip-label {
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.results-summary {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.results-item {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.results-item strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 900px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .stats-card-wide { grid-column: auto; }
+}
